@@ -3,7 +3,6 @@
 # udacity-project-3
 This will hold the files for the Udacity Web Programming Nanodegree Program Course's Project 3
 
-* [Online test website](http://up3.creatiko.com/)
 
 ## Usage Rights
 
