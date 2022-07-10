@@ -52,8 +52,14 @@ body{
     margin-top: 30px;
     height: 50px;
 }
-.title{
+input.error{
+    background:#da8dab;
+    color: #680303;
 
+}
+#zipErrMessage{
+    display: none;
+    color: #680303;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */

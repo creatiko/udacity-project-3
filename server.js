@@ -28,7 +28,6 @@ const server = app.listen(port, listening);
     console.log(`running on localhost: ${port}`);
   };
 
-const weatherData = [];
 
 // POST route
 app.post('/add', addWeather);
@@ -40,14 +39,13 @@ function addWeather(req,res){
         feeling: req.body.feeling,
         date: req.body.date
     }
-    weatherData.push(newEntry)
-    res.send(weatherData)
-    console.log(weatherData)
+    projectData=newEntry
+    res.send(projectData)
 };
 
   // GET route
 app.get('/all', sendData);
 
 function sendData (request, response) {
-  response.send(weatherData);
+  response.send(projectData);
 };
