@@ -30,13 +30,6 @@ const server = app.listen(port, listening);
 
 const weatherData = [];
 
-  // GET route
-app.get('/all', sendData);
-
-function sendData (request, response) {
-  response.send(weatherData);
-};
-
 // POST route
 app.post('/add', addWeather);
 
@@ -50,4 +43,11 @@ function addWeather(req,res){
     weatherData.push(newEntry)
     res.send(weatherData)
     console.log(weatherData)
+};
+
+  // GET route
+app.get('/all', sendData);
+
+function sendData (request, response) {
+  response.send(weatherData);
 };

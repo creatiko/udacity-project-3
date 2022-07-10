@@ -18,10 +18,8 @@ function performAction(e){
     .then(function(data){
       // Add data
       postData('/add', {temp: data.main.temp, feeling: feels, date: newDate});
-    })
-    .then(
       updateUI()
-    )
+    })
   }
 
 const getWeatherData = async (baseURL,newZip,apiKey) =>{
@@ -40,9 +38,13 @@ const updateUI = async () => {
     const request = await fetch('/all');
     try{
       const allData = await request.json();
-      //console.log(allData)
+      console.log(allData)
       // Write updated data to DOM elements
-      let i = allData.length - 1
+     
+         let i = allData.length - 1
+    
+      console.log(allData.length)
+      
       document.getElementById('entryHolder').style.display='block';
       document.getElementById('temp').innerHTML = Math.round(allData[i].temp)+ ' degrees';
       document.getElementById('content').innerHTML = allData[i].feeling;
